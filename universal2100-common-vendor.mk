@@ -7,7 +7,6 @@ PRODUCT_SOONG_NAMESPACES += \
 
 PRODUCT_COPY_FILES += \
     vendor/samsung/universal2100-common/proprietary/vendor/bin/hw/gps.sh:$(TARGET_COPY_OUT_VENDOR)/bin/hw/gps.sh \
-    vendor/samsung/universal2100-common/proprietary/vendor/etc/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/audio_effects_common.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects_common.conf \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/audio_effects_sec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects_sec.xml \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
@@ -21,6 +20,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/init/android.hardware.keymaster@4.0_strongbox-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.keymaster@4.0_strongbox-service.rc \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/init/android.hardware.neuralnetworks@1.3-service.eden-drv.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.neuralnetworks@1.3-service.eden-drv.rc \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/init/android.hardware.secure_element@1.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.secure_element@1.2-service.rc \
+    vendor/samsung/universal2100-common/proprietary/vendor/etc/init/hermesd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hermesd.rc \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/init/init.baseband.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.baseband.rc \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/init/init.gps.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.gps.rc \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/init/init.vendor.rilchip.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vendor.rilchip.rc \
@@ -51,6 +51,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/seccomp_policy/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/seccomp_policy/mediaextractor_sec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor_sec.policy \
+    vendor/samsung/universal2100-common/proprietary/vendor/etc/secnvm/k250a_00000306.img:$(TARGET_COPY_OUT_VENDOR)/etc/secnvm/k250a_00000306.img \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/sensor/lhd.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensor/lhd.conf \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/wifi/indoorchannel.info:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/indoorchannel.info \
@@ -110,6 +111,7 @@ PRODUCT_PACKAGES += \
     libfloatingfeature \
     libgf_in_system_lib \
     libgiantmscl \
+    libhermes \
     libhwjpeg \
     libhwjsqz \
     libhypervintf \
@@ -159,6 +161,7 @@ PRODUCT_PACKAGES += \
     libplaybackrecorder \
     vendor.samsung.hardware.bluetooth.a2dp@1.0 \
     vendor.samsung.hardware.hyper-V2-ndk_platform \
+    vendor.samsung.hardware.security.drk@2.0 \
     vendor.samsung.hardware.thermal@1.0 \
     vendor.samsung.libcolor.hardware \
     vendor.samsung.libcolor.hdr10plus \
@@ -187,12 +190,15 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@2.1-impl \
     gps.default \
     vendor.samsung.hardware.gnss@2.1-impl \
-    libNfcProperties \
+    libSemDataProps \
+    libSemTelephonyProps \
     libcommon \
     libcrane_compiler \
+    libdk_vnd_service_core \
     libeden_wrapper \
     libeden_wrapper_sdk \
     libengmode_client \
+    libese-grdg \
     libgraphgen_ann_import \
     libgraphgen_ann_nnc \
     libgraphgen_api \
@@ -201,7 +207,9 @@ PRODUCT_PACKAGES += \
     libgraphgen_intermediate_process \
     libgraphgen_misc \
     libgraphgen_network \
+    libhermes_bdbridge \
     libhermes_cred \
+    libhwvault \
     libir \
     libkeymaster_helper \
     libnpu_compiler \
@@ -216,6 +224,7 @@ PRODUCT_PACKAGES += \
     libril_sem \
     libsait_npu_compiler \
     libsbwcwrapper \
+    libshctrl \
     libskeymaster4device \
     libvkmanager_vendor \
     nfc_nci_nxpsn \
@@ -233,6 +242,7 @@ PRODUCT_PACKAGES += \
     manifest_android.hardware.drm@1.3-service.widevine \
     nxp.android.hardware.nfc@1.2-service \
     cbd \
+    hermesd \
     android.hardware.drm@1.3-service.widevine \
     android.hardware.graphics.allocator@4.0-service \
     android.hardware.keymaster@4.0_strongbox-service \

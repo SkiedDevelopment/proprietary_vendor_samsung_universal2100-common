@@ -1074,6 +1074,26 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+	name: "libhermes",
+	owner: "samsung",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libhermes.so"],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libhermes.so"],
+		},
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "libhwjpeg",
 	owner: "samsung",
 	strip: {
@@ -2072,6 +2092,26 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+	name: "vendor.samsung.hardware.security.drk@2.0",
+	owner: "samsung",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/vendor.samsung.hardware.security.drk@2.0.so"],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/vendor.samsung.hardware.security.drk@2.0.so"],
+		},
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "vendor.samsung.hardware.thermal@1.0",
 	owner: "samsung",
 	strip: {
@@ -2575,14 +2615,31 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "libNfcProperties",
+	name: "libSemDataProps",
 	owner: "samsung",
 	strip: {
 		none: true,
 	},
 	target: {
 		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libNfcProperties.so"],
+			srcs: ["proprietary/vendor/lib64/libSemDataProps.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libSemTelephonyProps",
+	owner: "samsung",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libSemTelephonyProps.so"],
 		},
 	},
 	compile_multilib: "64",
@@ -2617,6 +2674,23 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libcrane_compiler.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libdk_vnd_service_core",
+	owner: "samsung",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libdk_vnd_service_core.so"],
 		},
 	},
 	compile_multilib: "64",
@@ -2668,6 +2742,23 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libengmode_client.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libese-grdg",
+	owner: "samsung",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libese-grdg.so"],
 		},
 	},
 	compile_multilib: "64",
@@ -2813,6 +2904,23 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+	name: "libhermes_bdbridge",
+	owner: "samsung",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libhermes_bdbridge.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "libhermes_cred",
 	owner: "samsung",
 	strip: {
@@ -2821,6 +2929,23 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libhermes_cred.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libhwvault",
+	owner: "samsung",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libhwvault.so"],
 		},
 	},
 	compile_multilib: "64",
@@ -3059,6 +3184,23 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libsbwcwrapper.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libshctrl",
+	owner: "samsung",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libshctrl.so"],
 		},
 	},
 	compile_multilib: "64",
@@ -3336,6 +3478,18 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
+	name: "hermesd",
+	owner: "samsung",
+	srcs: ["proprietary/vendor/bin/hermesd"],
+	check_elf_files: false,
+	strip: {
+		none: true,
+	},
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_binary {
 	name: "android.hardware.drm@1.3-service.widevine",
 	owner: "samsung",
 	srcs: ["proprietary/vendor/bin/hw/android.hardware.drm@1.3-service.widevine"],
@@ -3343,8 +3497,8 @@ cc_prebuilt_binary {
 	strip: {
 		none: true,
 	},
-	relative_install_path: "hw",
 	prefer: true,
+	relative_install_path: "hw",
 	soc_specific: true,
 }
 
@@ -3356,8 +3510,8 @@ cc_prebuilt_binary {
 	strip: {
 		none: true,
 	},
-	relative_install_path: "hw",
 	prefer: true,
+	relative_install_path: "hw",
 	soc_specific: true,
 }
 
@@ -3369,8 +3523,8 @@ cc_prebuilt_binary {
 	strip: {
 		none: true,
 	},
-	relative_install_path: "hw",
 	prefer: true,
+	relative_install_path: "hw",
 	soc_specific: true,
 }
 
@@ -3382,8 +3536,8 @@ cc_prebuilt_binary {
 	strip: {
 		none: true,
 	},
-	relative_install_path: "hw",
 	prefer: true,
+	relative_install_path: "hw",
 	soc_specific: true,
 }
 
@@ -3395,8 +3549,8 @@ cc_prebuilt_binary {
 	strip: {
 		none: true,
 	},
-	relative_install_path: "hw",
 	prefer: true,
+	relative_install_path: "hw",
 	soc_specific: true,
 }
 
@@ -3408,8 +3562,8 @@ cc_prebuilt_binary {
 	strip: {
 		none: true,
 	},
-	relative_install_path: "hw",
 	prefer: true,
+	relative_install_path: "hw",
 	soc_specific: true,
 }
 
@@ -3421,8 +3575,8 @@ cc_prebuilt_binary {
 	strip: {
 		none: true,
 	},
-	relative_install_path: "hw",
 	prefer: true,
+	relative_install_path: "hw",
 	soc_specific: true,
 }
 
@@ -3434,8 +3588,8 @@ cc_prebuilt_binary {
 	strip: {
 		none: true,
 	},
-	relative_install_path: "hw",
 	prefer: true,
+	relative_install_path: "hw",
 	soc_specific: true,
 }
 
@@ -3447,8 +3601,8 @@ cc_prebuilt_binary {
 	strip: {
 		none: true,
 	},
-	relative_install_path: "hw",
 	prefer: true,
+	relative_install_path: "hw",
 	soc_specific: true,
 }
 
@@ -3460,8 +3614,8 @@ cc_prebuilt_binary {
 	strip: {
 		none: true,
 	},
-	relative_install_path: "hw",
 	prefer: true,
+	relative_install_path: "hw",
 	soc_specific: true,
 }
 
@@ -3473,8 +3627,8 @@ cc_prebuilt_binary {
 	strip: {
 		none: true,
 	},
-	relative_install_path: "hw",
 	prefer: true,
+	relative_install_path: "hw",
 	soc_specific: true,
 }
 
@@ -3486,8 +3640,8 @@ cc_prebuilt_binary {
 	strip: {
 		none: true,
 	},
-	relative_install_path: "hw",
 	prefer: true,
+	relative_install_path: "hw",
 	soc_specific: true,
 }
 

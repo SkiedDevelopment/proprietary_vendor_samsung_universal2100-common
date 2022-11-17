@@ -34,6 +34,7 @@
   <!-- DEMUX2 : 3rd-mic (mic3 l/r) -->
   <!-- DEMUX3 : multi-mic (mic1,mic2,mic3,mic4 4ch) -->
   <!-- DEMUX4 : dual-mic (mic1 l, mic2 r) -->
+  <!-- DEMUX5 : main-mic (mic1 l/r) same as DEMUX0 -->
 
   <include name="/vendor/etc/mixer_gains.xml" />
 
@@ -928,6 +929,16 @@
         <ctl name="ABOX VPCMIN_DAI0_A" value="WDMA2" />
     </path>
 
+    <!-- wdma2 to vpcmdai1 -->
+    <path name="route-wdma2-to-vpcmindai1">
+        <ctl name="ABOX VPCMIN_DAI1_A" value="WDMA2" />
+    </path>
+
+    <!-- wdma2 to vpcmdai2 -->
+    <path name="route-wdma2-to-vpcmindai2">
+        <ctl name="ABOX VPCMIN_DAI2_A" value="WDMA2" />
+    </path>
+
     <!-- wdma1 to vpcmdai0 -->
     <path name="route-wdma1-to-vpcmindai0">
         <ctl name="ABOX VPCMIN_DAI0_A" value="WDMA1" />
@@ -1023,6 +1034,12 @@
         <ctl name="ABOX TDM_DEMUX3_A" value="WDMA2" />
     </path>
 
+    <!-- Multi-mic wdma1 to Demux5 is same as Demux0 -->
+    <path name="route-wdma1-to-tdmdemux5">
+        <!-- wdma1 to demux5 for multi-mic -->
+        <ctl name="ABOX TDM_DEMUX5_A" value="WDMA1" />
+    </path>
+
     <!-- Demux0 to vpcmindai0 path -->
     <path name="route-tdmdemux0-to-vpcmindai0">
         <!-- demux0 to vpcmin_dai0 -->
@@ -1051,6 +1068,12 @@
     <path name="route-tdmdemux4-to-vpcmindai0">
         <!-- demux4 to vpcmin_dai0 -->
         <ctl name="ABOX VPCMIN_DAI0_A" value="TDM_DEMUX4" />
+    </path>
+
+    <!-- Demux5 is same as Demux0 to vpcmindai0 path -->
+    <path name="route-tdmdemux5-to-vpcmindai0">
+        <!-- demux5 to vpcmin_dai0 -->
+        <ctl name="ABOX VPCMIN_DAI0_A" value="TDM_DEMUX5" />
     </path>
 
     <!-- Demux0 to vpcmindai1 path -->
@@ -1083,6 +1106,12 @@
         <ctl name="ABOX VPCMIN_DAI1_A" value="TDM_DEMUX4" />
     </path>
 
+    <!-- Demux5 is same as Demux0 to vpcmindai1 path -->
+    <path name="route-tdmdemux5-to-vpcmindai1">
+        <!-- demux5 to vpcmin_dai1 -->
+        <ctl name="ABOX VPCMIN_DAI1_A" value="TDM_DEMUX5" />
+    </path>
+
     <!-- Demux0 to vpcmindai2 path -->
     <path name="route-tdmdemux0-to-vpcmindai2">
         <!-- demux0 to vpcmin_dai2 -->
@@ -1111,6 +1140,12 @@
     <path name="route-tdmdemux4-to-vpcmindai2">
         <!-- demux4 to vpcmin_dai2 -->
         <ctl name="ABOX VPCMIN_DAI2_A" value="TDM_DEMUX4" />
+    </path>
+
+    <!-- Demux5 is same as Demux0 to vpcmindai2 path -->
+    <path name="route-tdmdemux5-to-vpcmindai2">
+        <!-- demux5 to vpcmin_dai2 -->
+        <ctl name="ABOX VPCMIN_DAI2_A" value="TDM_DEMUX5" />
     </path>
 
     <path name="route-tdmdemux0-to-vpcmindai3">
@@ -1378,6 +1413,17 @@
         <ctl name="ABOX WDMA2 Channel" value="4" />
         <ctl name="ABOX WDMA2 Rate" value="48000" />
         <ctl name="ABOX WDMA2 Period" value="960" />
+        <ctl name="ABOX UAIF6 Width" value="16" />
+        <ctl name="ABOX UAIF6 Channel" value="4" />
+        <ctl name="ABOX UAIF6 Rate" value="48000" />
+    </path>
+
+    <path name="set-seriallif-wdma2-16bit-pdsz10-config">
+        <!-- wdma2 channels are set 4ch for serial LIF -->
+        <ctl name="ABOX WDMA2 Width" value="16" />
+        <ctl name="ABOX WDMA2 Channel" value="4" />
+        <ctl name="ABOX WDMA2 Rate" value="48000" />
+        <ctl name="ABOX WDMA2 Period" value="480" />
         <ctl name="ABOX UAIF6 Width" value="16" />
         <ctl name="ABOX UAIF6 Channel" value="4" />
         <ctl name="ABOX UAIF6 Rate" value="48000" />
@@ -3490,7 +3536,7 @@
     <!-- Karaoke Listenback MIC paths -->
     <path name="listenback-mic">
         <path name="dev-main-mic" />
-        <path name="set-seriallif-wdma2-16bit-pdsz20-config" />
+        <path name="set-seriallif-wdma2-16bit-pdsz10-config" />
         <path name="route-uaif6-to-nsrc2" />
         <path name="route-nsrc2-to-wdma2" />
         <!-- Mic dummy trigger path -->
@@ -3501,8 +3547,19 @@
         <!-- temporary direct connection without MCD-LBEFF-solution component -->
         <!--path name="route-tdmdemux0-to-srccom6_a" /-->
         <path name="route-vpcmoutdai6-to-srccom6_b" />
+        <path name="set-wdma1-48k-16bit-4ch-pdsz2-config" />
+        <path name="route-seriallif-uaif6-to-wdma1-bridge" />
+        <path name="route-wdma1-to-tdmdemux5" />
         <!-- primary stream node -->
-        <path name="route-tdmdemux0-to-vpcmindai0" />
+        <path name="route-tdmdemux5-to-vpcmindai0" />
+        <!-- fast stream node -->
+        <path name="route-tdmdemux5-to-vpcmindai1" />
+        <!-- low latency stream node -->
+        <path name="route-tdmdemux5-to-vpcmindai2" />
+    </path>
+
+    <path name="listenback-headphone-mic">
+        <path name="listenback-mic" />
     </path>
 
     <path name="listenback-usb-headset-mic">
@@ -3515,8 +3572,14 @@
         <!-- temporary direct connection without MCD-LBEFF solution component -->
         <!--path name="route-wdma2-to-srccom6_a" /-->
         <path name="route-vpcmoutdai6-to-srccom6_b" />
+        <path name="set-wdma1-16bit-2ch-pdsz2-config" />
+        <path name="route-udma-to-wdma1-bridge" />
         <!-- primary stream node -->
-        <path name="route-wdma2-to-vpcmindai0" />
+        <path name="route-wdma1-to-vpcmindai0" />
+        <!-- fast stream node -->
+        <path name="route-wdma1-to-vpcmindai1" />
+        <!-- low latency stream node -->
+        <path name="route-wdma1-to-vpcmindai2" />
     </path>
 
     <path name="listenback-async-usb-headset-mic">
@@ -3533,8 +3596,15 @@
         <!-- temporary direct connection without MCD-LBEFF solution component -->
         <!--path name="route-wdma2-to-srccom6_a" /-->
         <path name="route-vpcmoutdai6-to-srccom6_b" />
+        <path name="set-wdma1-16bit-2ch-pdsz2-config" />
+        <path name="route-sifs3-to-nsrc1-bridge" />
+        <path name="route-nsrc1-to-wdma1" />
         <!-- primary stream node -->
-        <path name="route-wdma2-to-vpcmindai0" />
+        <path name="route-wdma1-to-vpcmindai0" />
+        <!-- fast stream node -->
+        <path name="route-wdma1-to-vpcmindai1" />
+        <!-- low latency stream node -->
+        <path name="route-wdma1-to-vpcmindai2" />
     </path>
 
     <path name="listenback-bt-sco-headset-in">
@@ -3547,8 +3617,14 @@
         <!-- temporary direct connection without MCD-LBEFF solution component -->
         <!--path name="route-wdma2-to-srccom6_a" /-->
         <path name="route-vpcmoutdai6-to-srccom6_b" />
+        <path name="set-wdma1-16bit-2ch-pdsz2-config" />
+        <path name="route-uaif3-to-wdma1-bridge" />
         <!-- primary stream node -->
-        <path name="route-wdma2-to-vpcmindai0" />
+        <path name="route-wdma1-to-vpcmindai0" />
+        <!-- fast stream node -->
+        <path name="route-wdma1-to-vpcmindai1" />
+        <!-- low latency stream node -->
+        <path name="route-wdma1-to-vpcmindai2" />
     </path>
 
     <!-- Voice Recording paths -->
