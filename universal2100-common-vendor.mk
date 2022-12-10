@@ -114,7 +114,6 @@ PRODUCT_PACKAGES += \
     libhermes \
     libhwjpeg \
     libhwjsqz \
-    libhypervintf \
     libion_exynos \
     libmdf \
     libmpbase \
