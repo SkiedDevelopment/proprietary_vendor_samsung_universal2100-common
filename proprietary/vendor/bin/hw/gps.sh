@@ -16,7 +16,12 @@ if [ -d "$SILENT_LOGGING_9900" ] ; then
 fi
 
 if [ -d "$GSI_IMAGE" ] ; then 
-	CONFIGFILE=/vendor/etc/gnss/gps.gsi.xml
+    CONFIGFILE=/vendor/etc/gnss/gps.gsi.xml
+    if [ -e "$CONFIGFILE" ] ; then
+        CONFIGFILE=/vendor/etc/gnss/gps.gsi.xml
+    else
+        CONFIGFILE=/vendor/etc/gnss/gps.xml
+    fi
 fi
 
 exec $DAEMONFILE -c $CONFIGFILE

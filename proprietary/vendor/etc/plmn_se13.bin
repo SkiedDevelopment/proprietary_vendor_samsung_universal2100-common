@@ -1162,6 +1162,8 @@ $
 45500SmarTone MAC"SMC MAC
 
 45501CTM"CTM
+
+45502CT Macau"CT Macau
 
 455033 Macau"3 Macau
 
@@ -1312,6 +1314,10 @@ Banglalink"BL
 52004TRUE-H"TRUE-H
 
 52005dtac TriNet"dtac
+
+52015	NT Mobile"NT
+
+52047	NT Mobile"NT
 
 52099TRUE-H"TRUE-H
 
@@ -1889,4 +1895,4 @@ AeroMobile"AeroMob
 
 90150EchoStar Mobile"EML
 
-90171Tampnet"Tampnet*Published TS.25 Database 26 September 2022
+90171Tampnet"Tampnet(Published TS.25 Database 24 October 2022
