@@ -118,6 +118,7 @@ PRODUCT_PACKAGES += \
     libmdf \
     libmpbase \
     libqfp_sensortest \
+    libril-samsung \
     libsec_semRil \
     libsecaudiocoreutils \
     libsecaudioinfo \
@@ -189,8 +190,6 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@2.1-impl \
     gps.default \
     vendor.samsung.hardware.gnss@2.1-impl \
-    libSemDataProps \
-    libSemTelephonyProps \
     libcommon \
     libcrane_compiler \
     libdk_vnd_service_core \
@@ -220,7 +219,6 @@ PRODUCT_PACKAGES += \
     libnpuc_frontend \
     libnpuc_graph \
     libnpuc_template \
-    libril_sem \
     libsait_npu_compiler \
     libsbwcwrapper \
     libshctrl \
@@ -232,11 +230,9 @@ PRODUCT_PACKAGES += \
     vendor.samsung.hardware.gnss@2.1 \
     vendor.samsung.hardware.nfc@2.0 \
     vendor.samsung.hardware.radio.bridge@2.0 \
-    vendor.samsung.hardware.radio.bridge@2.1 \
     vendor.samsung.hardware.radio.channel@2.0 \
     vendor.samsung.hardware.radio@2.0 \
     vendor.samsung.hardware.radio@2.1 \
-    vendor.samsung.hardware.radio@2.2 \
     vendor.samsung_slsi.hardware.SbwcDecompService@1.0 \
     manifest_android.hardware.drm@1.3-service.widevine \
     nxp.android.hardware.nfc@1.2-service \
