@@ -2544,23 +2544,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "ese_spi_nxp",
-	owner: "samsung",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/ese_spi_nxp.so"],
-		},
-	},
-	compile_multilib: "64",
-	check_elf_files: false,
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
 	name: "android.hardware.gnss@2.1-impl",
 	owner: "samsung",
 	strip: {
@@ -3193,23 +3176,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "nfc_nci_nxpsn",
-	owner: "samsung",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/nfc_nci_nxpsn.so"],
-		},
-	},
-	compile_multilib: "64",
-	check_elf_files: false,
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
 	name: "vendor.samsung.hardware.audio@1.0",
 	owner: "samsung",
 	strip: {
@@ -3252,23 +3218,6 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/vendor.samsung.hardware.gnss@2.1.so"],
-		},
-	},
-	compile_multilib: "64",
-	check_elf_files: false,
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.samsung.hardware.nfc@2.0",
-	owner: "samsung",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/vendor.samsung.hardware.nfc@2.0.so"],
 		},
 	},
 	compile_multilib: "64",
@@ -3371,15 +3320,6 @@ prebuilt_etc_xml {
 	soc_specific: true,
 }
 
-prebuilt_etc_xml {
-	name: "nxp.android.hardware.nfc@1.2-service",
-	owner: "samsung",
-	src: "proprietary/vendor/etc/vintf/manifest/nxp.android.hardware.nfc@1.2-service.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
-}
-
 cc_prebuilt_binary {
 	name: "cbd",
 	owner: "samsung",
@@ -3457,19 +3397,6 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-	name: "android.hardware.secure_element@1.2-service",
-	owner: "samsung",
-	srcs: ["proprietary/vendor/bin/hw/android.hardware.secure_element@1.2-service"],
-	check_elf_files: false,
-	strip: {
-		none: true,
-	},
-	prefer: true,
-	relative_install_path: "hw",
-	soc_specific: true,
-}
-
-cc_prebuilt_binary {
 	name: "gpsd",
 	owner: "samsung",
 	srcs: ["proprietary/vendor/bin/hw/gpsd"],
@@ -3486,19 +3413,6 @@ cc_prebuilt_binary {
 	name: "lhd",
 	owner: "samsung",
 	srcs: ["proprietary/vendor/bin/hw/lhd"],
-	check_elf_files: false,
-	strip: {
-		none: true,
-	},
-	prefer: true,
-	relative_install_path: "hw",
-	soc_specific: true,
-}
-
-cc_prebuilt_binary {
-	name: "nxp.android.hardware.nfc@1.2-service",
-	owner: "samsung",
-	srcs: ["proprietary/vendor/bin/hw/nxp.android.hardware.nfc@1.2-service"],
 	check_elf_files: false,
 	strip: {
 		none: true,
