@@ -17,6 +17,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/universal2100-common/proprietary/vendor/bin/hw/lhd:$(TARGET_COPY_OUT_VENDOR)/bin/hw/lhd \
     vendor/samsung/universal2100-common/proprietary/vendor/bin/hw/rild:$(TARGET_COPY_OUT_VENDOR)/bin/hw/rild \
     vendor/samsung/universal2100-common/proprietary/vendor/bin/hw/vendor.samsung.hardware.gnss@2.1-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.samsung.hardware.gnss@2.1-service \
+    vendor/samsung/universal2100-common/proprietary/vendor/bin/hw/vendor.samsung_slsi.hardware.SbwcDecompService@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.samsung_slsi.hardware.SbwcDecompService@1.0-service \
     vendor/samsung/universal2100-common/proprietary/vendor/bin/hw/vendor.samsung_slsi.hardware.eden_runtime@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.samsung_slsi.hardware.eden_runtime@1.0-service \
     vendor/samsung/universal2100-common/proprietary/vendor/bin/tzdaemon:$(TARGET_COPY_OUT_VENDOR)/bin/tzdaemon \
     vendor/samsung/universal2100-common/proprietary/vendor/bin/tzts_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/tzts_daemon \
@@ -40,6 +41,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/init/init.vendor.rilcommon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vendor.rilcommon.rc \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/init/teegris_v4.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/teegris_v4.rc \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/init/vendor.samsung.hardware.gnss@2.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.gnss@2.1-service.rc \
+    vendor/samsung/universal2100-common/proprietary/vendor/etc/init/vendor.samsung_slsi.hardware.SbwcDecompService@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung_slsi.hardware.SbwcDecompService@1.0-service.rc \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/init/vendor.samsung_slsi.hardware.eden_runtime@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung_slsi.hardware.eden_runtime@1.0-service.rc \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/init/wifi.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/wifi.rc \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/init/wifi_brcm.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/wifi_brcm.rc \
@@ -288,6 +290,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/universal2100-common/proprietary/vendor/lib64/libqfp_sensortest.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqfp_sensortest.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib64/libril-samsung.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libril-samsung.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib64/libsait_npu_compiler.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsait_npu_compiler.so \
+    vendor/samsung/universal2100-common/proprietary/vendor/lib64/libsbwcwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsbwcwrapper.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib64/libsec_semRil.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsec_semRil.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib64/libsecaudiocoreutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsecaudiocoreutils.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib64/libsecaudioinfo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsecaudioinfo.so \
@@ -343,6 +346,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/universal2100-common/proprietary/vendor/lib64/vendor.samsung.libcolor.hardware.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.samsung.libcolor.hardware.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib64/vendor.samsung.libcolor.hdr10plus.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.samsung.libcolor.hdr10plus.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib64/vendor.samsung_slsi.hardware.ExynosA2DPOffload@3.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.samsung_slsi.hardware.ExynosA2DPOffload@3.0.so \
+    vendor/samsung/universal2100-common/proprietary/vendor/lib64/vendor.samsung_slsi.hardware.SbwcDecompService@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.samsung_slsi.hardware.SbwcDecompService@1.0.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib64/vendor.samsung_slsi.hardware.eden_runtime@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.samsung_slsi.hardware.eden_runtime@1.0-impl.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib64/vendor.samsung_slsi.hardware.eden_runtime@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.samsung_slsi.hardware.eden_runtime@1.0.so
 
