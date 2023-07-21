@@ -27,7 +27,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/eden/gpu/eden_kernel_64.bin:$(TARGET_COPY_OUT_VENDOR)/etc/eden/gpu/eden_kernel_64.bin \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/gnss/gps.cer:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.cer \
-    vendor/samsung/universal2100-common/proprietary/vendor/etc/gnss/gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/hdr_samsung_mx.key:$(TARGET_COPY_OUT_VENDOR)/etc/hdr_samsung_mx.key \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/hearing_aid_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/hearing_aid_audio_policy_configuration.xml \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.3-service.widevine.rc \
@@ -51,10 +50,8 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml \
-    vendor/samsung/universal2100-common/proprietary/vendor/etc/mixer_usb_default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_usb_default.xml \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/mixer_usb_gray.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_usb_gray.xml \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/mixer_usb_white.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_usb_white.xml \
-    vendor/samsung/universal2100-common/proprietary/vendor/libnfc-nxp_RF.conf:$(TARGET_COPY_OUT_VENDOR)/libnfc-nxp_RF.conf \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/playback_record_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/playback_record_audio_policy_configuration.xml \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/plmn_delta.bin:$(TARGET_COPY_OUT_VENDOR)/etc/plmn_delta.bin \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/plmn_delta_attaio.bin:$(TARGET_COPY_OUT_VENDOR)/etc/plmn_delta_attaio.bin \
@@ -65,10 +62,58 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/seccomp_policy/mediaextractor_sec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor_sec.policy \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/secnvm/k250a_00000306.img:$(TARGET_COPY_OUT_VENDOR)/etc/secnvm/k250a_00000306.img \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/sensor/lhd.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensor/lhd.conf \
+    vendor/samsung/universal2100-common/proprietary/vendor/etc/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/wifi/indoorchannel.info:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/indoorchannel.info \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/APBargeIn_AUDIO_SLSI.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/APBargeIn_AUDIO_SLSI.bin \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/APVD_AUDIO_SLSI.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/APVD_AUDIO_SLSI.bin \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/OD_V2.1.6_01_26_QVGA.nnc:$(TARGET_COPY_OUT_VENDOR)/firmware/OD_V2.1.6_01_26_QVGA.nnc \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/OD_V2.3.7_02_05_VGA.nnc:$(TARGET_COPY_OUT_VENDOR)/firmware/OD_V2.3.7_02_05_VGA.nnc \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/a2dpcom.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/a2dpcom.bin \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/abox_tplg.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/abox_tplg.bin \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/avsyncmix.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/avsyncmix.bin \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/bidirmic.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/bidirmic.bin \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/calliope_dram.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/calliope_dram.bin \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/calliope_dram_2.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/calliope_dram_2.bin \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/calliope_sram_2.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/calliope_sram_2.bin \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/clFGN10BitNV12_32.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/clFGN10BitNV12_32.bin \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/clFGN10BitNV12_64.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/clFGN10BitNV12_64.bin \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/clFGN10BitYV12_32.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/clFGN10BitYV12_32.bin \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/clFGN10BitYV12_64.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/clFGN10BitYV12_64.bin \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/clFGN8BitNV12_32.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/clFGN8BitNV12_32.bin \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/clFGN8BitNV12_64.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/clFGN8BitNV12_64.bin \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/clFGN8BitYV12_32.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/clFGN8BitYV12_32.bin \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/clFGN8BitYV12_64.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/clFGN8BitYV12_64.bin \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/cs35l40-bot-dsp1-spk-prot.wmfw:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l40-bot-dsp1-spk-prot.wmfw \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/cs35l40-rcv-dsp1-spk-prot.wmfw:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l40-rcv-dsp1-spk-prot.wmfw \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/default_configuration.flm.cfg.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/default_configuration.flm.cfg.bin \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/dsp.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/dsp.bin \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/dsp_do.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/dsp_do.bin \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/dsp_gkt.xml:$(TARGET_COPY_OUT_VENDOR)/firmware/dsp_gkt.xml \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/dsp_iac_dm.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/dsp_iac_dm.bin \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/dsp_iac_dm_do.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/dsp_iac_dm_do.bin \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/dsp_iac_pm.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/dsp_iac_pm.bin \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/dsp_iac_pm_do.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/dsp_iac_pm_do.bin \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/dsp_ivp_dm.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/dsp_ivp_dm.bin \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/dsp_ivp_dm_do.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/dsp_ivp_dm_do.bin \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/dsp_ivp_pm.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/dsp_ivp_pm.bin \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/dsp_ivp_pm_do.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/dsp_ivp_pm_do.bin \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/dsp_reloc_rules.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/dsp_reloc_rules.bin \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/libgaussian3x3.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/libgaussian3x3.elf \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/libivp.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/libivp.elf \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/liblog.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/liblog.elf \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/libnn.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/libnn.elf \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/listenbackeffect.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/listenbackeffect.bin \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/mfc/mfc_fw_flash.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mfc/mfc_fw_flash.bin \
     vendor/samsung/universal2100-common/proprietary/vendor/lib64/libsn100u_fw.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsn100u_fw.so \
-    vendor/samsung/universal2100-common/proprietary/vendor/firmware/y792_o1.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/y792_o1.bin \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/rxse.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/rxse.bin \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/sb_ll.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/sb_ll.bin \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/sb_music.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/sb_music.bin \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/sb_others.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/sb_others.bin \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/secure_configuration.flm.cfg.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/secure_configuration.flm.cfg.bin \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/txse1.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/txse1.bin \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/txse2.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/txse2.bin \
+    vendor/samsung/universal2100-common/proprietary/vendor/firmware/volumemonitor.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/volumemonitor.bin \
     vendor/samsung/universal2100-common/proprietary/vendor/lib/arm.graphics-V1-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib/arm.graphics-V1-ndk_platform.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib/egl/libGLES_mali.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/libGLES_mali.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib/hw/android.hardware.graphics.allocator@4.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.graphics.allocator@4.0-impl.so \
@@ -125,7 +170,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/universal2100-common/proprietary/vendor/lib/libepic_helper.so:$(TARGET_COPY_OUT_VENDOR)/lib/libepic_helper.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib/libexynoscamera_plugin.so:$(TARGET_COPY_OUT_VENDOR)/lib/libexynoscamera_plugin.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib/libexynoscamera_plugin_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libexynoscamera_plugin_utils.so \
-    vendor/samsung/universal2100-common/proprietary/vendor/lib/libexynosdisplay.so:$(TARGET_COPY_OUT_VENDOR)/lib/libexynosdisplay.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib/libexynosgraphicbuffer.so:$(TARGET_COPY_OUT_VENDOR)/lib/libexynosgraphicbuffer.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib/libexynosgscaler.so:$(TARGET_COPY_OUT_VENDOR)/lib/libexynosgscaler.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib/libexynosscaler.so:$(TARGET_COPY_OUT_VENDOR)/lib/libexynosscaler.so \
@@ -156,10 +200,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/universal2100-common/proprietary/vendor/lib/libstagefrighthw.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefrighthw.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib/libsynaFpSensorTestNwd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsynaFpSensorTestNwd.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib/libteecl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libteecl.so \
-    vendor/samsung/universal2100-common/proprietary/vendor/lib/libtriplecam_image_optical_zoom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtriplecam_image_optical_zoom.so \
-    vendor/samsung/universal2100-common/proprietary/vendor/lib/libtriplecam_video_optical_zoom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtriplecam_video_optical_zoom.so \
-    vendor/samsung/universal2100-common/proprietary/vendor/lib/libtriplecapture_interface.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtriplecapture_interface.so \
-    vendor/samsung/universal2100-common/proprietary/vendor/lib/libtriplepreview_interface.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtriplepreview_interface.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib/libuniapi.so:$(TARGET_COPY_OUT_VENDOR)/lib/libuniapi.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib/libuniplugin.so:$(TARGET_COPY_OUT_VENDOR)/lib/libuniplugin.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib/libuuid.so:$(TARGET_COPY_OUT_VENDOR)/lib/libuuid.so \
@@ -179,10 +219,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/universal2100-common/proprietary/vendor/lib/omx/libOMX.Exynos.VP9.Encoder.so:$(TARGET_COPY_OUT_VENDOR)/lib/omx/libOMX.Exynos.VP9.Encoder.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib/omx/libOMX.Exynos.WMV.Decoder.so:$(TARGET_COPY_OUT_VENDOR)/lib/omx/libOMX.Exynos.WMV.Decoder.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib/sensors.flicker.so:$(TARGET_COPY_OUT_VENDOR)/lib/sensors.flicker.so \
-    vendor/samsung/universal2100-common/proprietary/vendor/lib/sensors.grip.so:$(TARGET_COPY_OUT_VENDOR)/lib/sensors.grip.so \
-    vendor/samsung/universal2100-common/proprietary/vendor/lib/sensors.sensorhub.so:$(TARGET_COPY_OUT_VENDOR)/lib/sensors.sensorhub.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib/soundfx/libaudioeffectoffload.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libaudioeffectoffload.so \
-    vendor/samsung/universal2100-common/proprietary/vendor/lib/soundfx/libaudiosaplus_sec.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libaudiosaplus_sec.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib/soundfx/libmyspace.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libmyspace.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib/soundfx/libplaybackrecorder.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libplaybackrecorder.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib/vendor.samsung.hardware.bluetooth.a2dp@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.samsung.hardware.bluetooth.a2dp@1.0.so \
@@ -250,7 +287,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/universal2100-common/proprietary/vendor/lib64/libese-grdg.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libese-grdg.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib64/libexynoscamera_plugin.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libexynoscamera_plugin.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib64/libexynoscamera_plugin_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libexynoscamera_plugin_utils.so \
-    vendor/samsung/universal2100-common/proprietary/vendor/lib64/libexynosdisplay.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libexynosdisplay.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib64/libexynosgraphicbuffer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libexynosgraphicbuffer.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib64/libexynosgscaler.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libexynosgscaler.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib64/libexynosscaler.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libexynosscaler.so \
@@ -291,6 +327,8 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/universal2100-common/proprietary/vendor/lib64/libril-samsung.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libril-samsung.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib64/libsait_npu_compiler.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsait_npu_compiler.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib64/libsbwcwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsbwcwrapper.so \
+    vendor/samsung/universal2100-common/proprietary/vendor/lib64/libsec-ril-dsds.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsec-ril-dsds.so \
+    vendor/samsung/universal2100-common/proprietary/vendor/lib64/libsec-ril.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsec-ril.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib64/libsec_semRil.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsec_semRil.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib64/libsecaudiocoreutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsecaudiocoreutils.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib64/libsecaudioinfo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsecaudioinfo.so \
@@ -303,10 +341,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/universal2100-common/proprietary/vendor/lib64/libstagefrighthw.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefrighthw.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib64/libsynaFpSensorTestNwd.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsynaFpSensorTestNwd.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib64/libteecl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libteecl.so \
-    vendor/samsung/universal2100-common/proprietary/vendor/lib64/libtriplecam_image_optical_zoom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtriplecam_image_optical_zoom.so \
-    vendor/samsung/universal2100-common/proprietary/vendor/lib64/libtriplecam_video_optical_zoom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtriplecam_video_optical_zoom.so \
-    vendor/samsung/universal2100-common/proprietary/vendor/lib64/libtriplecapture_interface.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtriplecapture_interface.so \
-    vendor/samsung/universal2100-common/proprietary/vendor/lib64/libtriplepreview_interface.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtriplepreview_interface.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib64/libuniapi.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libuniapi.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib64/libuniplugin.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libuniplugin.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib64/libuuid.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libuuid.so \
@@ -326,10 +360,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/universal2100-common/proprietary/vendor/lib64/omx/libOMX.Exynos.VP9.Encoder.so:$(TARGET_COPY_OUT_VENDOR)/lib64/omx/libOMX.Exynos.VP9.Encoder.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib64/omx/libOMX.Exynos.WMV.Decoder.so:$(TARGET_COPY_OUT_VENDOR)/lib64/omx/libOMX.Exynos.WMV.Decoder.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib64/sensors.flicker.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sensors.flicker.so \
-    vendor/samsung/universal2100-common/proprietary/vendor/lib64/sensors.grip.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sensors.grip.so \
-    vendor/samsung/universal2100-common/proprietary/vendor/lib64/sensors.sensorhub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sensors.sensorhub.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib64/soundfx/libaudioeffectoffload.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libaudioeffectoffload.so \
-    vendor/samsung/universal2100-common/proprietary/vendor/lib64/soundfx/libaudiosaplus_sec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libaudiosaplus_sec.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib64/soundfx/libmyspace.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libmyspace.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib64/soundfx/libplaybackrecorder.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libplaybackrecorder.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib64/vendor.samsung.hardware.audio@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.samsung.hardware.audio@1.0.so \
@@ -348,7 +379,12 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/universal2100-common/proprietary/vendor/lib64/vendor.samsung_slsi.hardware.ExynosA2DPOffload@3.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.samsung_slsi.hardware.ExynosA2DPOffload@3.0.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib64/vendor.samsung_slsi.hardware.SbwcDecompService@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.samsung_slsi.hardware.SbwcDecompService@1.0.so \
     vendor/samsung/universal2100-common/proprietary/vendor/lib64/vendor.samsung_slsi.hardware.eden_runtime@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.samsung_slsi.hardware.eden_runtime@1.0-impl.so \
-    vendor/samsung/universal2100-common/proprietary/vendor/lib64/vendor.samsung_slsi.hardware.eden_runtime@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.samsung_slsi.hardware.eden_runtime@1.0.so
+    vendor/samsung/universal2100-common/proprietary/vendor/lib64/vendor.samsung_slsi.hardware.eden_runtime@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.samsung_slsi.hardware.eden_runtime@1.0.so \
+    vendor/samsung/universal2100-common/proprietary/vendor/tee/00000000-0000-0000-0000-42494f535542:$(TARGET_COPY_OUT_VENDOR)/tee/00000000-0000-0000-0000-42494f535542 \
+    vendor/samsung/universal2100-common/proprietary/vendor/tee/00000000-0000-0000-0000-46494e474502:$(TARGET_COPY_OUT_VENDOR)/tee/00000000-0000-0000-0000-46494e474502 \
+    vendor/samsung/universal2100-common/proprietary/vendor/tee/00000000-0000-0000-0000-6d706f667376:$(TARGET_COPY_OUT_VENDOR)/tee/00000000-0000-0000-0000-6d706f667376 \
+    vendor/samsung/universal2100-common/proprietary/vendor/tee/driver/18d9f073-18a5-4ade-9def-875e07f7f293_:$(TARGET_COPY_OUT_VENDOR)/tee/driver/18d9f073-18a5-4ade-9def-875e07f7f293_ \
+    vendor/samsung/universal2100-common/proprietary/vendor/tee/tui/resolution_common/ID00000100:$(TARGET_COPY_OUT_VENDOR)/tee/tui/resolution_common/ID00000100
 
 PRODUCT_PACKAGES += \
     libsecril-client.exynos2100 \
